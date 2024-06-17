@@ -1,0 +1,33 @@
+body {
+    background-image: url("./imges/sunset-1373171.jpg");
+    background-size: cover;
+    
+    
+    
+}
+#form{
+    text-align: center;
+    border: 2px double black;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+#title {
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    font-size: 80px;
+}
+
+#lable {
+    font-size: 29px;
+}
+
+#button {
+    font-size: 30px;
+
+}

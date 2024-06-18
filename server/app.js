@@ -33,12 +33,22 @@ app.post('/login', async (req, res) => {
     res.status(401).json({ error: 'user not found' });
 })
 
-app.get('/doktors' , async(req , res )=>{
-    let doktors = await Doctor.find()
-    console.log(doktors);
-    res.send(doktors)
+app.get('/doktors', async (req, res) => {
+    let doctors = await Doctor.find()
+    console.log(doctors);
+    res.send(doctors);
 
 })
+
+app.post('/doctors/by-city-and-specialization', async (req, res) => {
+    console.log(req.body);
+    const doctors = await Doctor.find({ city: req.body.select_region, specialization: req.body.select_field })
+    res.send(doctors)
+    console.log(doctors);
+
+})
+
+
 
 
 

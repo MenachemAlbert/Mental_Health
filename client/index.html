@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>בריאות הנפש</title>
     <link rel="stylesheet" href="page_1.css">
 </head>
 
 <body>
-    <h1 id="title"> ~ ~ ~ ~ Welcome to Mental Health ~ ~ ~ ~</h1>
-    <form id="form">
-        <label for="user">Username:</label>
-        <input type="text" id="user" name="user" required>
-        <br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-
-        <button type="submit" id="button">Login</button>
-    </form>
-
+    <div class="logo">
+        <div class="logo-icon"></div>
+        <div class="logo-text">בריאות הנפש</div>
+    </div>
+    
+    <div id="user-actions">
+        <button class="login-button" id="login-btn">התחברות</button>
+        <button class="search-button" id="search-btn">חיפוש רופאים</button>
+    </div>    
+    <div id="login-popup" class="login-popup">
+        <div class="popup-content">
+            <span class="close-button" onclick="closeLoginForm()">&times;</span>
+            <h2>התחברות לחשבון</h2>
+            <form id="form">
+                <div class="input-group">
+                    <label for="user">שם משתמש</label>
+                    <input type="text" id="user" name="user" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">סיסמא</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" id="button">התחבר</button>
+            </form>
+            <p class="signup-link">אין לך חשבון? <a href="#">הרשם</a></p>
+        </div>
+    </div>
+    
     <script src="./script.js"></script>
 </body>
 
